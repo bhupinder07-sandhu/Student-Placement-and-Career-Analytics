@@ -4,95 +4,131 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Placement Prediction</title>
+
     <link rel="stylesheet" href="placement.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
 </head>
+
 <body>
+
     <nav class="navbar">
 
-    <div class="logo">SCAS</div>
+        <div class="logo">SCAS</div>
 
-    <ul class="nav-links">
+        <ul class="nav-links">
 
-        <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">Home</a></li>
 
-        <li><a href="placement.html">Placement Prediction</a></li>
+            <li><a href="placement.html">Placement Prediction</a></li>
 
-        <li><a href="segmentation.html">Student Segmentation</a></li>
+            <li><a href="segmentation.html">Student Segmentation</a></li>
 
-        <li><a href="career.html">Career Advisor</a></li>
+            <li><a href="career.html">Career Advisor</a></li>
 
-        <li><a href="about.html">About Project</a></li>
+            <li><a href="about.html">About Project</a></li>
 
-    </ul>
+        </ul>
 
-</nav>
+    </nav>
 
-</nav>
-    <div class="container">
+    <section class="hero">
 
         <h1>🎯 Placement Prediction</h1>
+
+        <p>
+            Predict student placement opportunities using
+            Machine Learning and Data Analytics.
+        </p>
+
+    </section>
+
+    <div class="container">
 
         <div class="form-container">
 
             <div class="input-group">
                 <label>CGPA</label>
-                <input type="number" id="cgpa" step="0.01">
+                <input type="number" id="cgpa" step="0.01" placeholder="Enter CGPA">
             </div>
 
             <div class="input-group">
                 <label>Internships</label>
-                <input type="number" id="internships">
+                <input type="number" id="internships" placeholder="Enter Number of Internships">
             </div>
 
             <div class="input-group">
                 <label>Projects</label>
-                <input type="number" id="projects">
+                <input type="number" id="projects" placeholder="Enter Number of Projects">
             </div>
 
             <div class="input-group">
                 <label>Workshops / Certifications</label>
-                <input type="number" id="workshops">
+                <input type="number" id="workshops" placeholder="Enter Workshops">
             </div>
 
             <div class="input-group">
                 <label>Aptitude Test Score</label>
-                <input type="number" id="aptitude">
+                <input type="number" id="aptitude" placeholder="Enter Aptitude Score">
             </div>
 
             <div class="input-group">
-                <label>Soft Skills Rating (1-5)</label>
-                <input type="number" id="softskills" step="0.1">
+                <label>Soft Skills Rating (1 - 5)</label>
+                <input type="number" id="softskills" step="0.1" placeholder="Enter Soft Skills Rating">
             </div>
 
             <div class="input-group">
                 <label>Extracurricular Activities</label>
+
                 <select id="extra">
+
                     <option value="1">Yes</option>
+
                     <option value="0">No</option>
+
                 </select>
+
             </div>
 
             <div class="input-group">
+
                 <label>Placement Training</label>
+
                 <select id="training">
+
                     <option value="1">Yes</option>
+
                     <option value="0">No</option>
+
                 </select>
+
             </div>
 
             <div class="input-group">
+
                 <label>SSC Marks (%)</label>
-                <input type="number" id="ssc">
+
+                <input type="number"
+                       id="ssc"
+                       placeholder="Enter SSC Marks">
+
             </div>
 
             <div class="input-group">
+
                 <label>HSC Marks (%)</label>
-                <input type="number" id="hsc">
+
+                <input type="number"
+                       id="hsc"
+                       placeholder="Enter HSC Marks">
+
             </div>
 
             <button onclick="predictPlacement()">
+
                 Predict Placement
+
             </button>
 
         </div>
@@ -100,20 +136,44 @@
         <div class="result-card">
 
             <h2 id="predictionResult">
+
                 Prediction Result
+
             </h2>
 
             <h3 id="probabilityResult">
+
                 Placement Probability
+
             </h3>
 
             <div class="progress-container">
-                <div class="progress-bar" id="progressBar"></div>
+
+                <div class="progress-bar"
+                     id="progressBar"></div>
+
             </div>
 
         </div>
 
     </div>
+
+    <footer>
+
+        <h3>
+            Student Career Analytics System
+        </h3>
+
+        <p>
+            Developed By:
+            Bhupinder Sandhu • Kriti • Bavneet • Deepti
+        </p>
+
+        <p>
+            Machine Learning | Flask | HTML | CSS | JavaScript
+        </p>
+
+    </footer>
 
     <script src="placement.js"></script>
 
