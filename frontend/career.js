@@ -21,15 +21,19 @@ async function getAdvice() {
     try {
 
         const response = await fetch(
-    "https://student-career-analytics-api.onrender.com/career-advisor",
-    {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(data)
-    }
-);
+            "https://student-career-analytics-api.onrender.com/career-advisor",
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(data)
+            }
+        );
+
+        if (!response.ok) {
+            throw new Error("Server Error");
+        }
 
         const result = await response.json();
 
@@ -40,11 +44,9 @@ async function getAdvice() {
 
         result.recommendations.forEach(rec => {
 
-            const li =
-                document.createElement("li");
+            const li = document.createElement("li");
 
-            li.innerHTML =
-                "✅ " + rec;
+            li.innerHTML = "✅ " + rec;
 
             recommendationList.appendChild(li);
 
@@ -56,9 +58,7 @@ async function getAdvice() {
 
         console.error(error);
 
-        document.getElementById(
-            "recommendationList"
-        ).innerHTML =
+        document.getElementById("recommendationList").innerHTML =
         "<li>❌ Unable to connect to backend.</li>";
     }
 }
