@@ -27,15 +27,19 @@ async function predictPlacement() {
     try {
 
         const response = await fetch(
-    "https://student-career-analytics-api.onrender.com/predict-placement",
-    {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(data)
-    }
-);
+            "https://student-career-analytics-api.onrender.com/predict-placement",
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(data)
+            }
+        );
+
+        if (!response.ok) {
+            throw new Error("Server Error");
+        }
 
         const result = await response.json();
 
@@ -48,41 +52,31 @@ async function predictPlacement() {
         const progressBar =
             document.getElementById("progressBar");
 
-        if(result.prediction === "Placed"){
+        if (result.prediction === "Placed") {
 
-            predictionElement.innerHTML =
-            "✅ Placed";
+            predictionElement.innerHTML = "✅ Placed";
+            predictionElement.style.color = "#16a34a";
 
-            predictionElement.style.color =
-            "#16a34a";
+        } else {
 
-        }
-
-        else{
-
-            predictionElement.innerHTML =
-            "❌ Not Placed";
-
-            predictionElement.style.color =
-            "#dc2626";
+            predictionElement.innerHTML = "❌ Not Placed";
+            predictionElement.style.color = "#dc2626";
 
         }
 
         probabilityElement.innerHTML =
-        `Placement Probability: ${result.probability}%`;
+            `Placement Probability: ${result.probability}%`;
 
         progressBar.style.width =
-        result.probability + "%";
+            result.probability + "%";
 
     }
 
-    catch(error){
+    catch (error) {
 
         console.error(error);
 
-        alert(
-            "Unable to connect to backend."
-        );
+        alert("Unable to connect to backend.");
 
     }
 
