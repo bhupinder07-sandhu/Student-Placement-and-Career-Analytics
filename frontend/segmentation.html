@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Segmentation</title>
+
+    <link rel="stylesheet" href="segmentation..css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            SCAS
+        </div>
+
+        <ul class="nav-links">
+
+            <li><a href="index.html">Home</a></li>
+
+            <li><a href="placement.html">Placement</a></li>
+
+            <li><a href="segmentation.html">Segmentation</a></li>
+
+            <li><a href="career.html">Career Advisor</a></li>
+
+        </ul>
+
+    </nav>
+
+    <div class="container">
+
+        <h1>📊 Student Segmentation</h1>
+
+        <div class="form-container">
+
+            <input type="number" id="cgpa" placeholder="CGPA">
+
+            <input type="number" id="aptitude" placeholder="Aptitude Score">
+
+            <input type="number" id="softskills" placeholder="Soft Skills Rating">
+
+            <input type="number" id="projects" placeholder="Projects">
+
+            <input type="number" id="ssc" placeholder="SSC Marks">
+
+            <input type="number" id="hsc" placeholder="HSC Marks">
+
+            <button onclick="predictCluster()">
+                Identify Student Category
+            </button>
+
+        </div>
+
+        <div class="result-card">
+
+            <h2 id="clusterResult">
+                Student Category
+            </h2>
+
+            <p id="clusterDescription">
+                Enter details and click the button.
+            </p>
+
+        </div>
+
+    </div>
+
+    <script src="segmentation.js"></script>
+
+</body>
+
+</html>

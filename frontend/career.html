@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Career Advisor</title>
+
+    <link rel="stylesheet" href="career.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            SCAS
+        </div>
+
+        <ul class="nav-links">
+
+            <li><a href="index.html">Home</a></li>
+
+            <li><a href="placement.html">Placement</a></li>
+
+            <li><a href="segmentation.html">Segmentation</a></li>
+
+            <li><a href="career.html">Career Advisor</a></li>
+
+        </ul>
+
+    </nav>
+
+    <div class="container">
+
+        <h1>🚀 Career Advisor</h1>
+
+        <div class="form-grid">
+
+            <input type="number" id="cgpa" placeholder="CGPA">
+
+            <input type="number" id="internships" placeholder="Internships">
+
+            <input type="number" id="projects" placeholder="Projects">
+
+            <input type="number" id="workshops" placeholder="Workshops">
+
+            <input type="number" id="aptitude" placeholder="Aptitude Score">
+
+            <input type="number" id="softskills" placeholder="Soft Skills Rating">
+
+            <select id="extra">
+                <option value="1">Extracurricular Activities - Yes</option>
+                <option value="0">Extracurricular Activities - No</option>
+            </select>
+
+            <select id="training">
+                <option value="1">Placement Training - Yes</option>
+                <option value="0">Placement Training - No</option>
+            </select>
+
+        </div>
+
+        <button onclick="getAdvice()">
+            Generate Improvement Roadmap
+        </button>
+
+        <div class="result-card">
+
+            <h2>📈 Improvement Roadmap</h2>
+
+            <ul id="recommendationList">
+
+            </ul>
+
+        </div>
+
+    </div>
+
+    <script src="career.js"></script>
+
+</body>
+
+</html>

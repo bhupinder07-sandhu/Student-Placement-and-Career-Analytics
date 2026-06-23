@@ -1,0 +1,1 @@
+console.log("Student Career Analytics System Loaded");

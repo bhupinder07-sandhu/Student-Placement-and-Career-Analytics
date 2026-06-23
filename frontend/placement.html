@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placement Prediction</title>
+    <link rel="stylesheet" href="placement.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+
+    <div class="logo">
+        SCAS
+    </div>
+
+    <ul class="nav-links">
+
+        <li>
+            <a href="index.html">Home</a>
+        </li>
+
+        <li>
+            <a href="placement.html">Placement</a>
+        </li>
+
+        <li>
+            <a href="segmentation.html">Segmentation</a>
+        </li>
+
+        <li>
+            <a href="career.html">Career Advisor</a>
+        </li>
+
+    </ul>
+
+</nav>
+    <div class="container">
+
+        <h1>🎯 Placement Prediction</h1>
+
+        <div class="form-container">
+
+            <div class="input-group">
+                <label>CGPA</label>
+                <input type="number" id="cgpa" step="0.01">
+            </div>
+
+            <div class="input-group">
+                <label>Internships</label>
+                <input type="number" id="internships">
+            </div>
+
+            <div class="input-group">
+                <label>Projects</label>
+                <input type="number" id="projects">
+            </div>
+
+            <div class="input-group">
+                <label>Workshops / Certifications</label>
+                <input type="number" id="workshops">
+            </div>
+
+            <div class="input-group">
+                <label>Aptitude Test Score</label>
+                <input type="number" id="aptitude">
+            </div>
+
+            <div class="input-group">
+                <label>Soft Skills Rating (1-5)</label>
+                <input type="number" id="softskills" step="0.1">
+            </div>
+
+            <div class="input-group">
+                <label>Extracurricular Activities</label>
+                <select id="extra">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label>Placement Training</label>
+                <select id="training">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label>SSC Marks (%)</label>
+                <input type="number" id="ssc">
+            </div>
+
+            <div class="input-group">
+                <label>HSC Marks (%)</label>
+                <input type="number" id="hsc">
+            </div>
+
+            <button onclick="predictPlacement()">
+                Predict Placement
+            </button>
+
+        </div>
+
+        <div class="result-card">
+
+            <h2 id="predictionResult">
+                Prediction Result
+            </h2>
+
+            <h3 id="probabilityResult">
+                Placement Probability
+            </h3>
+
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="placement.js"></script>
+
+</body>
+</html>

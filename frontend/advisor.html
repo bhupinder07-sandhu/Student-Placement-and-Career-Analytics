@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Advisor</title>
+    <link rel="stylesheet" href="advisor.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">Student Career Analytics</div>
+
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="placement.html">Placement Prediction</a></li>
+        <li><a href="segmentation.html">Student Segmentation</a></li>
+        <li><a href="advisor.html">Career Advisor</a></li>
+        <li><a href="about.html">About</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+
+    <h1>Career Improvement Advisor</h1>
+
+    <div class="form-container">
+
+        <input type="number" id="cgpa" placeholder="CGPA">
+        <input type="number" id="internships" placeholder="Internships">
+        <input type="number" id="projects" placeholder="Projects">
+        <input type="number" id="aptitude" placeholder="Aptitude Score">
+        <input type="number" id="softskills" placeholder="Soft Skills">
+
+        <select id="extra">
+            <option value="1">Extracurricular Activities - Yes</option>
+            <option value="0">Extracurricular Activities - No</option>
+        </select>
+
+        <select id="training">
+            <option value="1">Placement Training - Yes</option>
+            <option value="0">Placement Training - No</option>
+        </select>
+
+        <button onclick="getAdvice()">
+            Generate Recommendations
+        </button>
+
+    </div>
+
+    <div class="result-card">
+
+        <ul id="recommendationList"></ul>
+
+    </div>
+
+</div>
+
+<script src="advisor.js"></script>
+
+</body>
+</html>

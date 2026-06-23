@@ -1,0 +1,21 @@
+body{
+    background:#f5f7fa;
+    font-family:Arial;
+}
+
+.about-container{
+    max-width:900px;
+    margin:auto;
+    background:white;
+    padding:40px;
+    margin-top:50px;
+    border-radius:15px;
+}
+
+h1,h2{
+    margin-bottom:15px;
+}
+
+p,li{
+    line-height:1.8;
+}
