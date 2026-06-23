@@ -5,13 +5,15 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <title>Career Advisor</title>
 
     <link rel="stylesheet" href="career.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
 
 </head>
 
@@ -19,56 +21,104 @@
 
     <nav class="navbar">
 
-    <div class="logo">SCAS</div>
+        <div class="logo">SCAS</div>
 
-    <ul class="nav-links">
+        <ul class="nav-links">
 
-        <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">Home</a></li>
 
-        <li><a href="placement.html">Placement Prediction</a></li>
+            <li><a href="placement.html">Placement Prediction</a></li>
 
-        <li><a href="segmentation.html">Student Segmentation</a></li>
+            <li><a href="segmentation.html">Student Segmentation</a></li>
 
-        <li><a href="career.html">Career Advisor</a></li>
+            <li><a href="career.html">Career Advisor</a></li>
 
-        <li><a href="about.html">About Project</a></li>
+            <li><a href="about.html">About Project</a></li>
 
-    </ul>
+        </ul>
 
-</nav>
+    </nav>
 
-    <div class="container">
+    <section class="hero">
 
         <h1>🚀 Career Advisor</h1>
 
+        <p>
+            Get personalized recommendations and
+            improvement strategies to enhance your
+            placement readiness.
+        </p>
+
+    </section>
+
+    <div class="container">
+
         <div class="form-grid">
 
-            <input type="number" id="cgpa" placeholder="CGPA">
+            <div class="input-group">
+                <label>CGPA</label>
+                <input type="number" id="cgpa" step="0.01">
+            </div>
 
-            <input type="number" id="internships" placeholder="Internships">
+            <div class="input-group">
+                <label>Internships</label>
+                <input type="number" id="internships">
+            </div>
 
-            <input type="number" id="projects" placeholder="Projects">
+            <div class="input-group">
+                <label>Projects</label>
+                <input type="number" id="projects">
+            </div>
 
-            <input type="number" id="workshops" placeholder="Workshops">
+            <div class="input-group">
+                <label>Workshops</label>
+                <input type="number" id="workshops">
+            </div>
 
-            <input type="number" id="aptitude" placeholder="Aptitude Score">
+            <div class="input-group">
+                <label>Aptitude Test Score</label>
+                <input type="number" id="aptitude">
+            </div>
 
-            <input type="number" id="softskills" placeholder="Soft Skills Rating">
+            <div class="input-group">
+                <label>Soft Skills Rating</label>
+                <input type="number" id="softskills" step="0.1">
+            </div>
 
-            <select id="extra">
-                <option value="1">Extracurricular Activities - Yes</option>
-                <option value="0">Extracurricular Activities - No</option>
-            </select>
+            <div class="input-group">
 
-            <select id="training">
-                <option value="1">Placement Training - Yes</option>
-                <option value="0">Placement Training - No</option>
-            </select>
+                <label>Extracurricular Activities</label>
+
+                <select id="extra">
+
+                    <option value="1">Yes</option>
+
+                    <option value="0">No</option>
+
+                </select>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Placement Training</label>
+
+                <select id="training">
+
+                    <option value="1">Yes</option>
+
+                    <option value="0">No</option>
+
+                </select>
+
+            </div>
 
         </div>
 
         <button onclick="getAdvice()">
+
             Generate Improvement Roadmap
+
         </button>
 
         <div class="result-card">
@@ -82,6 +132,23 @@
         </div>
 
     </div>
+
+    <footer>
+
+        <h3>
+            Student Career Analytics System
+        </h3>
+
+        <p>
+            Developed By:
+            Bhupinder Sandhu • Kriti • Bavneet • Deepti
+        </p>
+
+        <p>
+            Machine Learning | Flask | HTML | CSS | JavaScript
+        </p>
+
+    </footer>
 
     <script src="career.js"></script>
 
