@@ -4,7 +4,37 @@
     box-sizing:border-box;
     font-family:'Poppins',sans-serif;
 }
+.navbar{
+    background:#0f172a;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 40px;
+}
 
+.logo{
+    font-size:24px;
+    font-weight:bold;
+    color:white;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    font-weight:500;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#60a5fa;
+}
 body{
     background:#f8fafc;
 }

@@ -1,21 +1,243 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
 body{
-    background:#f5f7fa;
-    font-family:Arial;
+    background:#f1f5f9;
+    color:#1e293b;
 }
 
-.about-container{
-    max-width:900px;
-    margin:auto;
-    background:white;
-    padding:40px;
-    margin-top:50px;
-    border-radius:15px;
+/* NAVBAR */
+
+.navbar{
+    background:#0f172a;
+    color:white;
+    padding:18px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
 }
 
-h1,h2{
+.logo{
+    font-size:28px;
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    font-weight:500;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#60a5fa;
+}
+
+/* HERO */
+
+.hero{
+    background:linear-gradient(
+        135deg,
+        #2563eb,
+        #7c3aed
+    );
+    color:white;
+    text-align:center;
+    padding:90px 20px;
+}
+
+.hero h1{
+    font-size:56px;
     margin-bottom:15px;
 }
 
-p,li{
+.hero p{
+    font-size:22px;
+    max-width:800px;
+    margin:auto;
+}
+
+/* MAIN CONTAINER */
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    padding:50px 0;
+}
+
+/* CARDS */
+
+.card{
+    background:white;
+    margin-bottom:30px;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-4px);
+}
+
+.card h2{
+    color:#2563eb;
+    margin-bottom:20px;
+    border-left:5px solid #2563eb;
+    padding-left:12px;
+}
+
+.card p{
     line-height:1.8;
+}
+
+.card ul{
+    margin-left:20px;
+}
+
+.card li{
+    margin:12px 0;
+    line-height:1.6;
+}
+
+/* IMAGES */
+
+.diagram{
+    width:100%;
+    border-radius:15px;
+    border:1px solid #e2e8f0;
+    margin-bottom:15px;
+}
+
+/* TECH STACK */
+
+.tech-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:15px;
+}
+
+.tech-grid span{
+    background:linear-gradient(
+        135deg,
+        #2563eb,
+        #7c3aed
+    );
+    color:white;
+    text-align:center;
+    padding:15px;
+    border-radius:12px;
+    font-weight:600;
+}
+
+/* TABLE */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:10px;
+}
+
+th{
+    background:#2563eb;
+    color:white;
+}
+
+th,
+td{
+    padding:15px;
+    border:1px solid #dbeafe;
+    text-align:center;
+}
+
+tr:nth-child(even){
+    background:#f8fafc;
+}
+
+/* TEAM */
+
+.team-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.member{
+    background:#f8fafc;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    border-top:4px solid #2563eb;
+}
+
+.member h3{
+    margin-bottom:10px;
+}
+
+.equal-credit{
+    margin-top:20px;
+    text-align:center;
+    font-weight:600;
+    color:#2563eb;
+}
+
+/* FOOTER */
+
+footer{
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:35px;
+    margin-top:40px;
+}
+
+footer h3{
+    margin-bottom:10px;
+}
+
+footer p{
+    margin:8px 0;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .navbar{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .hero p{
+        font-size:18px;
+    }
+
+    .container{
+        width:95%;
+    }
+
 }
